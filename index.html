@@ -10,79 +10,76 @@
 
 <!-- Navbar -->
 <nav>
-    <ul class="nav-center">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#internships">Internships</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#contact">Contact</a></li>
+    <ul>
+        <li><button onclick="showSection('home')">Home</button></li>
+        <li><button onclick="showSection('about')">About</button></li>
+        <li><button onclick="showSection('skills')">Skills</button></li>
+        <li><button onclick="showSection('internships')">Internships</button></li>
+        <li><button onclick="showSection('achievements')">Achievements</button></li>
+        <li><button onclick="showSection('projects')">Projects</button></li>
+        <li><button onclick="showSection('contact')">Contact</button></li>
     </ul>
 </nav>
-
-<!-- Hero -->
-<section id="home" class="hero">
-    <div class="hero-text">
-        <h1>Sree Harshitha Mooraboina</h1>
-        <p>FrontEnd Web Developer | UI/UX Designer </p>
-        <button onclick="scrollToSection()">Explore My Profile</button>
-    </div>
-    
+<!-- HOME (UPDATED UI ONLY) -->
+<section id="home" class="section active home-section">
+  <div class="home-content">
+    <h1>Sree Harshitha Mooraboina</h1>
+    <p>FrontEnd Web Developer | UI/UX Designer</p>
+    <button class="home-btn" onclick="showSection('about')">
+      Explore My Profile
+    </button>
+  </div>
 </section>
 
-<!-- About -->
- <section id="about" class="fade-in">
+<section id="about" class="section">
     <h2>About Me</h2>
     <p>
-       I am a final-year B.Tech student specializing in Computer Science Engineering (AI & ML).
-I have a strong interest in UI/UX design and enjoy creating clean, user-friendly digital experiences.
-I am skilled in HTML, CSS, Python, and UI/UX design tools like Figma.
-I like working on real-world projects, redesigning applications, and improving usability.
-I actively participate in hackathons, workshops, and technical events to enhance my skills.
-I am a quick learner, adaptable, and enjoy working in team environments.
-My goal is to build impactful products that combine creativity, design, and technology.
-I am motivated to start my career as a UI/UX designer and technology enthusiast
+        I am a final-year B.Tech student specializing in Computer Science Engineering (AI & ML) with a strong interest in UI/UX design and a passion for creating clean, user-friendly digital experiences. I am skilled in HTML, CSS, Python, and UI/UX design tools such as Figma. I enjoy working on real-world projects, redesigning applications, and improving usability through research-driven design decisions. I actively participate in hackathons, workshops, and technical events to continuously enhance my technical and creative skills.
+
+In addition, I have a keen eye for visual aesthetics and user behavior, allowing me to design intuitive interfaces that balance functionality and creativity. I am a quick learner, adaptable, and enjoy collaborating in team environments to solve problems effectively. My goal is to build impactful digital products that seamlessly combine design, technology, and innovation, and to begin my career as a UI/UX designer and technology enthusiast.
+
     </p>
 </section>
 
-<!-- Skills -->
- <section id="skills" class="fade-in">
+<section id="skills" class="section">
     <h2>Skills</h2>
 
-    <div class="skill-box">
-        <h3>Languages</h3>
-        <p>C, Python</p>
-    </div>
-
-    <div class="skill-box">
-        <h3>Developer Technologies</h3>
-        <p>HTML, CSS</p>
-    </div>
-
-    <div class="skill-box">
-        <h3>UI Skills</h3>
-        <p>Wireframing & Prototyping, Mobile App & Web App UI Design, Color Theory & Typography</p>
-    </div>
-
-    <div class="skill-box">
-        <h3>UX Skills</h3>
-        <p>User Research, User Persona Creation, User Journey Mapping, Usability Testing</p>
-    </div>
-
-    <div class="skill-box">
-        <h3>Soft Skills</h3>
-        <p>Team Building, Teamwork, Adaptability, Problem-Solving</p>
-    </div>
-
-    <div class="skill-box">
-        <h3>Languages Known</h3>
-        <p>English, Telugu (Native Speaker)</p>
-    </div>
+    <div class="box"><h3>Languages:</h3>  <p>C, Python</p> </div>
+    <div class="box"><h3>Developer Technologies:</h3>  <p>HTML, CSS</p></div>
+    <div class="box"><h3>UI Skills:</h3>  <p>Wireframing & Prototyping, Mobile App & Web App UI Design, Color Theory & Typography</p></div>
+    <div class="box"><h3>UX Skills:</h3> <p>User Research, User Persona Creation, User Journey Mapping, Usability Testing</p></div>
+    <div class="box"><h3>Soft Skills:</h3> <p>Teamwork, Team Building ,Adaptability, Problem-Solving</p></div>
+    <div class="box"><h3>Languages Known:</h3> <p>English, Telugu (Native Speaker)</p></div>
 </section>
 
-<!-- Projects -->
- <section id="projects" class="fade-in">
+<section id="internships" class="section">
+    <h2>Internships</h2>
+    <div class="box">
+        <h3>Frontend Web Development Intern</h3>
+          <p>
+           Developed web-based projects including a strong-password generator and a calculator using HTML, CSS, and JavaScript.
+           Gained hands-on experience in UI styling, layout design, and enhancing website responsiveness.
+        </p>
+    </div>
+    <div class="box">
+        <h3>Generative AI Intern</h3>
+          <p>
+          Completed a 2-month certified internship focused on Generative AI concepts, model behavior, and practical prompt engineering.
+           Worked on hands-on tasks involving text generation, AI tools, and real-world applications of generative models.
+        </p>
+    </div>
+
+</section>
+
+<section id="achievements" class="section">
+    <h2>Achievements</h2>
+    <div class="box"><p>🎤 Resource Person | Mastering Excel – Tips & Tricks | GITAMW</p></div>
+    <div class="box"><p>🥇 Won 1st Place | Python Full-Stack Hackathon | Brainovision Solutions India Pvt Ltd</p></div>
+    <div class="box"><p>🤝 Student Volunteer in Tech Fest</p></div>
+    <div class="box"><p>📜 Certificate in Essay Writing | KSRM</p></div>
+</section>
+
+<section id="projects" class="section">
     <h2>Projects</h2>
     <div class="project-container">
       <div class="project-card">
@@ -118,71 +115,30 @@ go-to destination for cricket fans to learn about their favorite stars by using 
        View Project
     </a>
 </div>
-        
+
+    
 </section>
 
-<!-- Internships -->
-<section id="internships" class="fade-in">
-    <h2>Internships</h2>
+<section id="contact" class="section">
+  <h2>Contact Me</h2>
+  <form action="https://formspree.io/f/mqezzddb" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 
-    <div class="skill-box">
-         <h3>Frontend Web Development Intern</h3>
-        <p>
-           Developed web-based projects including a strong-password generator and a calculator using HTML, CSS, and JavaScript.
-           Gained hands-on experience in UI styling, layout design, and enhancing website responsiveness.
-        </p>
-    </div>
-    <div class="skill-box">
-        <h3>Generative AI Intern</h3>
-        <p>
-           Completed a 2-month certified internship focused on Generative AI concepts, model behavior, and practical prompt engineering.
-           Worked on hands-on tasks involving text generation, AI tools, and real-world applications of generative models.
-        </p>
-    </div>
-</section>
-
-
-<!-- Achievements -->
-<section id="achievements" class="fade-in">
-    <h2>Achievements</h2>
-
-    <div class="skill-box">
-        <p>🎤 Resource Person | Mastering Excel – Tips & Tricks | GITAMW</p>
-    </div>
-
-    <div class="skill-box">
-        <p>🥇 Won 1st Place | Python Full-Stack Hackathon | Brainovision Solutions India Pvt Ltd</p>
-    </div>
-
-    <div class="skill-box">
-        <p>🤝 Student Volunteer in Tech Fest</p>
-    </div>
-
-    <div class="skill-box">
-        <p>📜 Certificate in Essay Writing | KSRM</p>
-    </div>
-</section>
-
-
-<!-- Contact -->
- <section id="contact" class="fade-in">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/xvgeejoq"
-          method="POST">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-    <section id="resume-download" class="resume-section">
-    <a href="C:\Users\moora\Downloads\Mooraboina Sree Harshitha updated Resume 1.pdf" download class="resume-btn">Download Resume</a>
-    </section>
-
+    <br><br>
+    <!-- Download Resume -->
+  <a href="C:\Users\moora\Downloads\Mooraboina Sree Harshitha updated Resume 1.pdf" download class="download-resume-btn">
+    Download Resume
+</a>
 </section>
 
 <footer>
     <p>© 2025 Sree Harshitha | Portfolio</p>
 </footer>
+
 
 <script src="script.js"></script>
 </body>
