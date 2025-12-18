@@ -7,86 +7,110 @@
 
 body {
     background: #f4f6f8;
-    color: #333;
 }
 
 /* Navbar */
 nav {
     background: #0f172a;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
+    padding: 15px;
 }
 
-.nav-center {
+nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 20px;
 }
 
-.nav-center li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-.nav-center li a:hover {
+nav button:hover {
     color: #38bdf8;
 }
 
-/* Hero */
-.hero {
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to right, #0f172a, #1e293b);
-    color: white;
-    text-align: center;
+/* ===== SECTION VISIBILITY CONTROL ===== */
+.section {
+  display: none;
+  min-height: 100vh;
 }
 
-.hero button {
-    margin-top: 20px;
-    padding: 12px 25px;
-    border: none;
-    background: #38bdf8;
-    cursor: pointer;
-    border-radius: 6px;
+/* DEFAULT SECTIONS (About, Skills, Projects...) */
+.section.active {
+  display: block;
+  padding: 80px 60px;
 }
 
-/* Sections */
-section {
-    padding: 70px 15%;
+/* HOME ONLY - center aligned */
+.home-section.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 35px;
+
+/* ===== HOME BACKGROUND ===== */
+.home-section {
+  background: radial-gradient(
+    circle at top,
+    #1e293b 0%,
+    #0f172a 40%,
+    #020617 100%
+  );
 }
 
-/* Skills */
-.skill-box {
+/* ===== HOME CONTENT ===== */
+.home-content {
+  text-align: center;
+  color: white;
+}
+
+.home-content h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.home-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.home-btn {
+  background: #38bdf8;
+  color: #020617;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.home-btn:hover {
+  background: #0ea5e9;
+}
+
+
+/* Boxes */
+.box {
     background: white;
+    margin: 15px auto;
     padding: 20px;
-    margin-bottom: 20px;
+    width: 80%;
     border-left: 5px solid #38bdf8;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
 /* Cards */
 .card {
     background: white;
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Achievements */
-.achievement-list {
-    list-style: none;
-    line-height: 2;
-    font-size: 17px;
 }
 
 /* Projects */
@@ -101,66 +125,6 @@ h2 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Contact */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-form input, form textarea {
-    padding: 12px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-form button {
-    background: #0f172a;
-    color: white;
-    padding: 12px;
-    border: none;
-    cursor: pointer;
-}
-
-/* Footer */
-footer {
-    background: #0f172a;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-.resume-section {
-    text-align: center;
-    padding: 60px 0;
-}
-
-.resume-btn {
-    display: inline-block;
-    padding: 14px 30px;
-    background: #38bdf8;
-    color: #000;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 8px;
-    transition: 0.3s ease;
-}
-
-.resume-btn:hover {
-    background: #0f172a;
-    color: #fff;
-}
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: 1s ease;
-}
-
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
 }
 .project-btn {
     display: inline-block;
@@ -179,3 +143,79 @@ footer {
     color: #fff;
 }
 
+/* Resume button */
+.resume-btn {
+    padding: 12px 25px;
+    background: #38bdf8;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 60%;
+    margin: auto;
+}
+
+input, textarea {
+    padding: 10px;
+}
+/* ===== CENTER MAIN SECTION HEADINGS ONLY ===== */
+.section > h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+/* ===== CONTACT SECTION: CENTER DOWNLOAD RESUME BUTTON ===== */
+#contact .download-resume {
+  display: block;
+  margin: 20px auto 30px auto;
+  text-align: center;
+}
+/* ===== DOWNLOAD RESUME BUTTON (BLACK & CENTER) ===== */
+.download-resume-btn {
+  display: inline-block;
+  margin: 20px auto 30px auto;
+  padding: 12px 28px;
+  background-color: #38bdf8;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  text-align: center;
+}
+
+#contact {
+  text-align: center;
+}
+
+/* ===== SEND MESSAGE BUTTON (BLACK) ===== */
+#contact form button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#contact form button:hover,
+.download-resume-btn:hover {
+  background-color: #222222;
+}
+/* Footer */
+footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+.resume-section {
+    text-align: center;
+    padding: 60px 0;
+}
