@@ -1,16 +1,10 @@
-function scrollToSection() {
-    document.getElementById("about").scrollIntoView({
-        behavior: "smooth"
-    });
-}
-const sections = document.querySelectorAll('.fade-in');
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('.section');
 
-window.addEventListener('scroll', () => {
     sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < window.innerHeight - 100) {
-            section.classList.add('show');
-        }
+        section.classList.remove('active');
     });
-});
+
+    document.getElementById(sectionId).classList.add('active');
+}
 
