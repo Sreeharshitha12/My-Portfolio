@@ -219,3 +219,21 @@ footer {
     text-align: center;
     padding: 60px 0;
 }
+/* ===== ABOUT SECTION SOCIAL ICONS ===== */
+.about-socials {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.about-socials a {
+  color: #38bdf8;
+  font-size: 26px;
+  transition: 0.3s ease;
+}
+
+.about-socials a:hover {
+  color: #000000;
+  transform: translateY(-4px);
+}
